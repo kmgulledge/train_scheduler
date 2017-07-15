@@ -1,0 +1,158 @@
+<!-- Begin Blue Belt Coding Ninja HTML -->
+<!DOCTYPE html> 
+
+ <!-- What language do we speak? -->
+ <html lang="en">
+
+ <!-- Head Info Here -->
+  <head>
+ 
+   <!-- Meta Info -->
+   <meta charset="UTF-8">
+   <meta name="description" content="Train Schedule"><!-- Description of Web Page Info -->
+   <meta name="keywords" content="Train Schedule, Train, Schedule"><!-- Keywords of Web Page  Info -->
+   <meta name="author" content="Kevin Gulledge"> <!-- Who is this guy and why is his name here? -->
+   <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Mobility -->
+    
+   <!-- Name / Title Of The Page -->
+   <title>Train Scheduler</title>
+
+   <!-- CSS Reset -->
+   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    
+   <!-- Bootstrap CSS Link -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+   <!-- Personalized CSS Link -->
+   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+   <!-- Jquery Min Link -->
+   <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+   <!-- Moment.js Min Link -->
+   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+   <!-- FireBase Link -->
+   <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+  </head>
+
+  <!-- Begin Body HTML -->
+  <body>
+
+  <!--Train tracker-->
+  <div class ="container">
+
+   <!--Jumbotron-->
+   <div class ="jumbotron">
+  
+    <h1 class="text-center">World Wide Train Schedule</h1>
+  
+    <h3 class="text-center ride">Train Information Website</h3>
+
+    <h4 class="text-center ride" id="postedTime"></h4>
+
+   </div>
+
+   <div class="row">
+    
+    <div class="col-lg-12">
+    
+     <!--Current Train Schedule-->
+     <div class="panel panel-primary">
+     
+      <div class="panel-heading">
+      
+       <h3 class="panel-title current"><strong>Current Train Schedule</strong></h3>
+       
+      </div>
+      
+      <div class="panel-body">
+
+       <table class="table table-hover" id='trainTable'>
+       
+        <thead>
+         
+         <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency(minutes)</th>
+            <th>Next Arrival</th>
+            <th>Minutes Away</th>
+         </tr>
+        
+        </thead>
+        
+       <tbody></tbody>
+       
+       </table>
+        
+      </div>
+      
+     </div>
+
+      <!-- Add Trains  -->
+      <div class="panel panel-primary">
+       
+       <div class="panel-heading">
+        
+        <h3 class="panel-title add"><strong>Add Trains</strong></h3>
+      
+      </div>
+      
+      <div class="panel-body">
+
+        <!-- Entry Form -->
+        <form>
+          
+          <div class="form-group">
+            
+            <label for="">Train Name</label>
+            <input type="text" class="form-control" id="trainNameInput">
+          
+          </div>
+
+          <div class="form-group">
+            
+            <label for="">Destination</label>
+            <input type="text" class="form-control" id="destinationInput">
+          
+          </div>
+
+           <div class="form-group">
+            
+            <label for="">Frequency(minutes)</label>
+            <input type="text" class="form-control" id="frequencyInput">
+         
+          </div>
+
+          <div class="form-group">
+            
+            <label for="">First Train Time (HH:mm - ex: 02:00)</label>
+            <input type="text" class="form-control" id="timeInput">
+         
+          </div>
+
+          <!-- Submit Button -->    
+          <button type="submit" class="btn btn-primary" id="addTrainBtn">Submit</button>
+        
+        </form>
+
+        </div>
+      
+      </div>
+
+    </div>
+  
+  </div>
+
+</div>
+
+<!-- Javascript -->
+<script src='assets/javascript/trainapp.js'></script>
+
+  <!-- End Body HTML -->		
+  </body>
+
+<!-- End HTML -->
+</html>
